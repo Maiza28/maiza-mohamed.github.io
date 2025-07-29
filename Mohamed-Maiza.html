@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Nom</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background-color: #ffffff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        
+        .institution {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .nav {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .nav a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav a:hover {
+            background-color: #f8f9fa;
+            text-decoration: underline;
+        }
+        
+        .nav a.active {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        
+        .content {
+            margin-bottom: 40px;
+        }
+        
+        .content h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        .content p {
+            text-align: justify;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .research-interests {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-left: 4px solid #3498db;
+            margin: 30px 0;
+        }
+        
+        .research-interests h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        
+        .research-interests p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0;
+        }
+        
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        
+        .contact-info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+        
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .publications {
+            display: none;
+        }
+        
+        .publications.active {
+            display: block;
+        }
+        
+        .publication-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .publication-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .publication-details {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .publication-abstract {
+            font-style: italic;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+            
+            .title {
+                font-size: 20px;
+            }
+            
+            .subtitle, .institution {
+                font-size: 16px;
+            }
+            
+            .nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">Votre Nom</div>
+        <div class="subtitle">Professeur Assistant</div>
+        <div class="subtitle">Département de [Votre Spécialité]</div>
+        <div class="institution">Université de [Votre Ville]</div>
+    </div>
+
+    <nav class="nav">
+        <a href="#" class="nav-link active" onclick="showSection('about')">Accueil</a>
+        <a href="#" class="nav-link" onclick="showSection('research')">Recherche</a>
+        <a href="#" class="nav-link" onclick="showSection('publications')">Publications</a>
+        <a href="#" class="nav-link" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <div id="about" class="content">
+        <p>Je suis Professeur Assistant à l'<a href="#" style="color: #3498db; text-decoration: none;">Université de [Votre Ville], Département de [Votre Spécialité]</a>. Précédemment, j'étais chercheur postdoctoral à l'<a href="#" style="color: #3498db; text-decoration: none;">Université de [Précédente Institution]</a> dans le groupe de <a href="#" style="color: #3498db; text-decoration: none;">[Nom du Superviseur]</a>. Avant cela, j'étais doctorant à l'<a href="#" style="color: #3498db; text-decoration: none;">Université de [Institution Doctorat]</a> sous la supervision de <a href="#" style="color: #3498db; text-decoration: none;">[Nom du Directeur de Thèse]</a>.</p>
+
+        <div class="research-interests">
+            <h3>Intérêts de Recherche</h3>
+            <p>Mes recherches portent principalement sur [Domaine 1]; [Domaine 2]; [Domaine 3]; [Domaine 4]; [Domaine 5]; [Domaine 6]; et leurs applications en [Application 1] et [Application 2].</p>
+        </div>
+
+        <p>Mes travaux actuels se concentrent sur [Description de vos recherches actuelles]. Je m'intéresse particulièrement aux aspects théoriques et pratiques de [Sujet spécifique], ainsi qu'aux applications interdisciplinaires avec [Domaine connexe].</p>
+
+        <p>J'enseigne régulièrement des cours de [Cours 1], [Cours 2], et [Cours 3] au niveau [licence/master/doctorat]. Je supervise également des étudiants en thèse et en stage de recherche sur des sujets liés à mes domaines d'expertise.</p>
+    </div>
+
+    <div id="research" class="content" style="display: none;">
+        <h2>Projets de Recherche</h2>
+        
+        <div class="publication-item">
+            <div class="publication-title">Projet de Recherche Principal</div>
+            <div class="publication-details">En cours - Financement [Source de financement]</div>
+            <div class="publication-abstract">
+                Description détaillée de votre projet de recherche principal. Expliquez les objectifs, la méthodologie, et l'impact attendu de ce travail.
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="publication-title">Collaboration Internationale</div>
+            <div class="publication-details">2023-2025 - Avec [Institution Partenaire]</div>
+            <div class="publication-abstract">
+                Description d'un projet de collaboration avec une institution internationale. Mentionnez les partenaires, les objectifs communs, et les résultats escomptés.
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="publication-title">Recherche Appliquée</div>
+            <div class="publication-details">2024 - Partenariat industriel</div>
+            <div class="publication-abstract">
+                Description d'un projet de recherche appliquée en partenariat avec l'industrie. Expliquez comment vos recherches théoriques se traduisent en applications pratiques.
+            </div>
+        </div>
+    </div>
+
+    <div id="publications" class="content" style="display: none;">
+        <h2>Publications Récentes</h2>
+        
+        <div class="publication-item">
+            <div class="publication-title">Titre de Votre Article Principal</div>
+            <div class="publication-details">Revue Scientifique, Vol. X, pp. Y-Z (2024)</div>
+            <div class="publication-abstract">
+                Résumé de votre publication la plus importante. Décrivez brièvement les contributions principales, la méthodologie utilisée, et l'impact de ce travail sur votre domaine de recherche.
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="publication-title">Article de Conférence Internationale</div>
+            <div class="publication-details">Actes de [Nom de la Conférence], pp. A-B (2023)</div>
+            <div class="publication-abstract">
+                Résumé d'une présentation à une conférence internationale. Expliquez le contexte, les résultats présentés, et l'accueil de la communauté scientifique.
+            </div>
+        </div>
+
+        <div class="publication-item">
+            <div class="publication-title">Chapitre de Livre</div>
+            <div class="publication-details">Dans "Titre du Livre", Éditeur, pp. X-Y (2023)</div>
+            <div class="publication-abstract">
+                Description de votre contribution à un ouvrage collectif. Mentionnez le thème du livre et comment votre chapitre s'inscrit dans l'ensemble.
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="content" style="display: none;">
+        <div class="contact-info">
+            <h3>Coordonnées</h3>
+            <p><strong>Email :</strong> <a href="mailto:votre.email@universite.ca">votre.email@universite.ca</a></p>
+            <p><strong>Téléphone :</strong> +1 (XXX) XXX-XXXX, poste XXXX</p>
+            <p><strong>Bureau :</strong> Local [Numéro du bureau]</p>
+            <p><strong>Adresse :</strong><br>
+            Département de [Votre Spécialité]<br>
+            Université de [Votre Ville]<br>
+            [Adresse complète]<br>
+            [Code postal], [Ville], [Province/État]</p>
+        </div>
+
+        <div class="contact-info" style="margin-top: 20px;">
+            <h3>Liens Professionnels</h3>
+            <p><a href="#" target="_blank">Google Scholar</a></p>
+            <p><a href="#" target="_blank">ORCID</a></p>
+            <p><a href="#" target="_blank">ResearchGate</a></p>
+            <p><a href="#" target="_blank">GitHub</a></p>
+            <p><a href="#" target="_blank">LinkedIn</a></p>
+        </div>
+
+        <div class="contact-info" style="margin-top: 20px;">
+            <h3>Heures de Bureau</h3>
+            <p><strong>Lundi :</strong> 14h00 - 16h00</p>
+            <p><strong>Mercredi :</strong> 10h00 - 12h00</p>
+            <p><strong>Vendredi :</strong> 15h00 - 17h00</p>
+            <p><em>Ou sur rendez-vous</em></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Votre Nom. Tous droits réservés.</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Cache toutes les sections
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Retire la classe active de tous les liens
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Affiche la section sélectionnée
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Ajoute la classe active au lien cliqué
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
